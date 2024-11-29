@@ -1,7 +1,7 @@
 // Check if user is already logged in on page load
 window.onload = function() {
     const loggedInUser = localStorage.getItem("loggedInUser");
-    if (loggedInUser && window.location.pathname === "/login.html") {
+    if (loggedInUser && window.location.pathname === "/index.html") {
         // Redirect logged-in users to task manager
         window.location.href = "task-manager.html";
     }
@@ -23,7 +23,7 @@ function registerUser(event) {
     alert("Registration successful!");
 
     // Redirect to login page
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 // Login user
@@ -52,7 +52,7 @@ function logout() {
     localStorage.removeItem('loggedInUser');
     
     // Redirect to login page
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 // Add task functionality
